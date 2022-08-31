@@ -40,7 +40,7 @@ public class LaserMeasure
       inches = raw;
       
       //funcionality
-      if (raw <= -1) {
+      if (raw <= 0) {
          System.out.print("Measurement must be non-negative!");
       } else {
          System.out.println();

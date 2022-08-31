@@ -18,24 +18,26 @@ public class MySolver
     //establish vars
       Scanner userInput = new Scanner(System.in);
       double result;
-      double x;
-      double y;
-      double z;
+      double x = 0.0;
+      double y = 0.0;
+      double z = 0.0;
    
    //get x y z inputs
-      System.out.print("Enter x value: ");
+      System.out.print("result = (8.5x + 6.1) (10y + 7.9) / z");
+      System.out.println();
+      System.out.print("\tEnter x: ");
       x = userInput.nextDouble();
-      System.out.print("Enter y value: ");
+      System.out.print("\tEnter y: ");
       y = userInput.nextDouble();
-      System.out.print("Enter z value: ");
+      System.out.print("\tEnter z: ");
       z = userInput.nextDouble();
    
    //run calculation
       result = ((8.5 * x + 6.1) * (10 * y + 7.9) / z);
       if (z == 0) {
-         System.out.println("The result is undefined");
+         System.out.println("result is undefined");
       } else {
-         System.out.println("The result is " + result);
+         System.out.println("result = " + result);
       }
     
    }
