@@ -20,19 +20,19 @@ public class RadicalFormula
       double xValue = 0;
       double leftResult;
       double rightResult;
-      double leftResult2;
-      double rightResult2;
       double result = 0;
      
    
    //Num input functionality-----------------------------
-      System.out.print("Enter a value for X: ");
+      System.out.print("Enter a value for x: ");
       xValue = userInput.nextDouble();
    
    //Num output functionality----------------------------
-      leftResult = Math.pow((3 * Math.pow(xValue, 8)) - (2 * Math.pow(xValue, 3)), 2);
-      rightResult = Math.abs((3 * Math.pow(xValue, 5)) - (2 * Math.pow(xValue, 3)));
-
+      leftResult = Math.pow((3 * Math.pow(xValue, 8)) 
+         - (2 * Math.pow(xValue, 3)), 2);
+      rightResult = Math.abs((3 * Math.pow(xValue, 5)) 
+         - (2 * Math.pow(xValue, 3)));
+   
       result = Math.sqrt(leftResult + rightResult);
       
       
@@ -41,12 +41,13 @@ public class RadicalFormula
       
    //Measurement Functionality----------------------------
     
-      int index = resultStr.indexOf('.');
-      int leftInt = index;
-      int rightInt = resultStr.length() - index - 1;
+      int indexValue = resultStr.indexOf('.');
+      int leftInt = indexValue;
+      int rightInt = resultStr.length() - indexValue - 1;
        
-      DecimalFormat formatResult = new DecimalFormat();
-      formatResult.setMaximumFractionDigits(5);
+      DecimalFormat formatResult = new DecimalFormat("###,###.000000");
+      formatResult.setMaximumFractionDigits(3);
+    
    //Print-------------------------------------------------
       System.out.println("Result: " + result);
       System.out.println("# digits to left of decimal point: " + leftInt);
